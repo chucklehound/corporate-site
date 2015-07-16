@@ -2,9 +2,8 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
+    padding: 12px 0;
 
     // Positioning context for the mobile navigation icon
     position: relative;
@@ -17,6 +16,12 @@
     margin-bottom: 0;
     float: left;
 
+    &.logo {
+        width: 160px;
+        height: 36px;
+        background: transparent url('../img/skyscanner-logo.svg') no-repeat 0 0;
+    }
+
     &,
     &:visited {
         color: $grey-color-dark;
@@ -25,7 +30,6 @@
 
 .site-nav {
     float: right;
-    line-height: 56px;
 
     .menu-icon {
         display: none;
@@ -93,7 +97,13 @@
  */
 .site-footer {
     border-top: 1px solid $grey-color-light;
+    background-color: $text-color;
+    color: #fff;
     padding: $spacing-unit 0;
+
+    p, ul, li {
+        color: $background-color;
+    }
 }
 
 .footer-heading {

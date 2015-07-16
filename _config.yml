@@ -1,14 +1,12 @@
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
+title: Skyscanner
+email: chris.behr@skyscanner.net
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Skyscanner is a leading global travel search site, providing instant online comparisons for millions of flights on over a thousand airlines, as well as car hire and hotels.
+  Skyscanner’s flexible search options mean you can browse prices across a whole month, or even a year, allowing you to get the best deals. You always book direct with the airline or travel agent, so you get the lowest price, with no extra fees added.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://skyscanner.net" # the base hostname & protocol for your site
+twitter_username: skyscanner
 
 # Build settings
 markdown: kramdown

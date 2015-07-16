@@ -89,15 +89,15 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: $brand-color;
+    color: $link-color;
     text-decoration: none;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        color: $link-color;
     }
 
     &:hover {
-        color: $text-color;
+        color: $link-color;
         text-decoration: underline;
     }
 }
@@ -170,6 +170,7 @@ pre {
     }
 }
 
+.visually-hidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
 
 
 /**
