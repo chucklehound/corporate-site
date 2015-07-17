@@ -23,7 +23,9 @@ body {
     -webkit-text-size-adjust: 100%;
 }
 
-
+body *, body * > * {
+    box-sizing: border-box;
+}
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -91,6 +93,7 @@ h1, h2, h3, h4, h5, h6 {
 a {
     color: $link-color;
     text-decoration: none;
+    transition: color .1s ease-in-out;
 
     &:visited {
         color: $link-color;
