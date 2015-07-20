@@ -338,16 +338,95 @@
 .timeline {
     width: 100%;
     background-color: #595d68;
-    padding: 24px;
+    padding: 24px 0;
 
     h2 {
         color: #fff;
     }
-    ul {
-        li {
-            float: left;
-            display: block;
-            padding: 42px;
+
+    .timeline-scroller {
+        width: 100%;
+        padding: 12px 0;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+
+        ul {
+            height: 180px;
+            width: 2880px;
+            li {
+                float: left;
+                text-align: center;
+                color: #fff;
+                position: relative;
+                display: block;
+                font-weight: bold;
+                width: 160px;
+                margin: 0 32px;
+
+                &:hover::before {
+                    -webkit-animation: pulse .3s ease-in-out 1;
+                }
+
+                @-webkit-keyframes pulse {
+                    80% { -webkit-transform: scale(1.05,1.05); -webkit-transform-origin: center; }
+                }
+
+                &[data-icon*="pulse1"]::before {
+                    content: '';
+                    height: 160px;
+                    width: 160px;
+                    background: transparent url('../img/pulses-01.svg') no-repeat 50% 50%;
+                    display: block;
+                    position: absolute;
+                    top: 32px;
+                    left: 50%;
+                    margin-left: -80px;
+                }
+                &[data-icon*="pulse2"]::before {
+                    content: '';
+                    height: 160px;
+                    width: 160px;
+                    background: transparent url('../img/pulses-02.svg') no-repeat 50% 50%;
+                    display: block;
+                    position: absolute;
+                    top: 32px;
+                    left: 50%;
+                    margin-left: -80px;
+                }
+                &[data-icon*="pulse3"]::before {
+                    content: '';
+                    height: 160px;
+                    width: 160px;
+                    background: transparent url('../img/pulses-03.svg') no-repeat 50% 50%;
+                    display: block;
+                    position: absolute;
+                    top: 32px;
+                    left: 50%;
+                    margin-left: -80px;
+                }
+                &[data-icon*="pulse4"]::before {
+                    content: '';
+                    height: 160px;
+                    width: 160px;
+                    background: transparent url('../img/pulses-04.svg') no-repeat 50% 50%;
+                    display: block;
+                    position: absolute;
+                    top: 32px;
+                    left: 50%;
+                    margin-left: -80px;
+                }
+                &[data-icon*="pulse5"]::before {
+                    content: '';
+                    height: 160px;
+                    width: 160px;
+                    background: transparent url('../img/pulses-05.svg') no-repeat 50% 50%;
+                    display: block;
+                    position: absolute;
+                    top: 32px;
+                    left: 50%;
+                    margin-left: -80px;
+                }
+            }
         }
     }
 }
