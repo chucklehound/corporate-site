@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about/
+cssclass: about
 ---
 
 Skyscanner is a leading global travel search site, providing instant online comparisons for millions of flights on over a thousand airlines, as well as car hire and hotels.

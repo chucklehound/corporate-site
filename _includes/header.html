@@ -16,16 +16,22 @@
 </header>
 <section class="hero-img">
     <nav class="secondary-nav wrapper">
+        <a href="/" class="home-icon"><span class="visually-hidden">Home</span></a>
         {% for page in site.pages %}
         {% if page.title %}
         <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
         {% endif %}
         {% endfor %}
-        <a href="/" class="home-icon"><span class="visually-hidden">Home</span></a>
+
+        <a target="_blank" class="page-link contact" href="/contact">Contact Us</a>
 
       <div id="search-container">
         <input type="text" id="search-input" placeholder="Search...">
-        <ul id="results-container"></ul>
       </div>
     </nav>
+    <div class="wrapper">
+        <ul id="results-container"></ul>
+    </div>
+
+
 </section>
