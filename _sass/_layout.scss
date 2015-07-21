@@ -10,11 +10,28 @@
     position: relative;
 }
 
+a#navigation-toggle {
+    width: 24px;
+    height: 24px;
+    float: right;
+    position: relative;
+    top: 4px;
+    background: transparent url('../img/menu-24x24.svg') no-repeat 50% 50%;
+
+    @media screen and (min-width: 650px) {
+        display: none;
+    }
+}
+
 .hero-img {
     width: 100%;
-    min-height: 256px;
-    background: $brand-color url('../img/header-img-cafe-1530x400.jpg') no-repeat 0 50%;
+    min-height: 288px;
+    background: $brand-color url('../img/header-img-cafe-1530x400.jpg') no-repeat 50% 50%;
     background-size: cover;
+
+    @media screen and (max-width: 420px) {
+        min-height: 224px;
+    }
 
     &.about {
         background-image: url('../img/header-img-phone-1530x400.jpg');
@@ -30,8 +47,12 @@
         a {
             color: #fff;
             font-weight: bold;
-            padding-right: 24px;
+            padding-right: 32px;
             line-height: 42px;
+
+            &:hover {
+                color: $link-color;
+            }
 
             &.contact {
                 display: none;
@@ -65,7 +86,7 @@
                 height: 37px;
                 padding: 8px 12px;
                 border-radius: 4px;
-                border: 0;
+                border: 1px solid transparent;
                 color: transparent;
                 background: transparent url('../img/search_24x24.svg') no-repeat 50% 50%;
                 font: 15px 'Source Sans Pro', Helvetica, Arial, sans-serif;
@@ -81,7 +102,7 @@
                     color: #fff;
                     cursor: text;
                     padding-left: 40px;
-                    border-color: #fff;
+                    border: 1px solid $brand-color;
                     background-position: 8px 50%;
                     background-color: rgba(255,255,255,.2);
 
@@ -91,6 +112,18 @@
                 }
 
 
+            }
+        }
+        @media screen and (max-width: 650px) {
+            &.nav-collapse.closed {
+                max-height: 0;
+                border-radius: 0;
+                width: 100%;
+            }
+            a {
+                width: 100%;
+                position: relative;
+                display: block;
             }
         }
     }
@@ -103,7 +136,7 @@
         display: block;
         margin: 12px auto;
         max-width: 300px;
-        right: 320px;
+        right: 30%;
         box-shadow: 0 1px 2px $grey-color;
 
         a, span {
@@ -148,6 +181,10 @@
     float: right;
     margin-top: 4px;
 
+    @media screen and (max-width: 650px) {
+        display: none;
+    }
+
     .menu-icon {
         display: none;
     }
@@ -168,50 +205,6 @@
             margin-left: 42px;
 
     }
-    }
-
-    @include media-query($on-palm) {
-        position: absolute;
-        top: 9px;
-        right: 30px;
-        background-color: $background-color;
-        border: 1px solid $grey-color-light;
-        border-radius: 5px;
-        text-align: right;
-
-        .menu-icon {
-            display: block;
-            float: right;
-            width: 36px;
-            height: 26px;
-            line-height: 0;
-            padding-top: 10px;
-            text-align: center;
-
-            > svg {
-                width: 18px;
-                height: 15px;
-
-                path {
-                    fill: $grey-color-dark;
-                }
-            }
-        }
-
-        .trigger {
-            clear: both;
-            display: none;
-        }
-
-        &:hover .trigger {
-            display: block;
-            padding-bottom: 5px;
-        }
-
-        .page-link {
-            display: block;
-            padding: 5px 10px;
-        }
     }
 }
 
@@ -361,7 +354,7 @@ small {
 
         ul {
             height: 180px;
-            width: 2880px;
+            width: 2732px;
 
             li[data-icon*="pulse"] {
                 float: left;
@@ -487,5 +480,26 @@ small {
             background-color: $dark-brand-color;
             text-decoration: none;
         }
+    }
+    @media screen and (max-width: 700px) {
+        flex-direction: column;
+        -ms-flex-direction: column;
+        -webkit-flex-direction: column;
+
+        a {
+            margin: 4px 0;
+            min-height: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .js .nav-collapse {
+        clip: rect(0 0 0 0);
+        max-height: 0;
+        position: absolute;
+        display: block;
+        overflow: hidden;
+        zoom: 1;
     }
 }

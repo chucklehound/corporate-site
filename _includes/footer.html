@@ -53,6 +53,14 @@
   </div>
 </footer>
 
+<script src="{{ site.baseurl }}/src/responsive-nav.min.js" type="text/javascript"></script>
+
+<script>
+    var nav = responsiveNav(".nav-collapse", {customToggle: "navigation-toggle",navActiveClass: "js-nav-active"});
+</script>
+
+<script src="{{ site.baseurl }}/bower_components/simple-jekyll-search/dest/jekyll-search.js" type="text/javascript"></script>
+
 <script type="text/javascript">
   SimpleJekyllSearch({
     searchInput: document.getElementById('search-input'),

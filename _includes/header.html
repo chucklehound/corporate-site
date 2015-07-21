@@ -10,12 +10,13 @@
       <a target="_blank" class="page-link" href="http://www.skyscanner.net/carhire">Car Hire</a>
       <a target="_blank" class="page-link" href="/contact">Contact Us</a>
     </nav>
+    <a id="navigation-toggle"><span class="visually-hidden" aria-hidden="true">Menu</span></a>
 
   </div>
 
 </header>
 <section class="hero-img">
-    <nav class="secondary-nav wrapper">
+    <nav class="secondary-nav wrapper nav-collapse">
         <a href="/" class="home-icon"><span class="visually-hidden">Home</span></a>
         {% for page in site.pages %}
         {% if page.title %}
